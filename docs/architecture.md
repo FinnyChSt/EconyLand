@@ -1,6 +1,4 @@
-# EconyLand
-
-## Architecture
+## Architecture of the EconyLand project
 
 ### Design
 

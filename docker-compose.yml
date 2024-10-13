@@ -1,0 +1,18 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: maria123
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: maria
+      MYSQL_PASSWORD: maria123
+    ports:
+      - "3306:3306" # Exposes the default MariaDB port
+    volumes:
+      - mariadb_data:/var/lib/mysql # Persist database data
+
+volumes:
+  mariadb_data:
+    driver: local
